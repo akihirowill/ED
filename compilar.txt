@@ -1,0 +1,19 @@
+gcc arquivo.c -o arquivo: 
+
+./arquivo
+
+
+			COMANDOS NO GDB
+
+
+para utilizar o gdb tem que compilar o arquivo com a flag -g
+
+gdb ./nome do arquivo c
+
+run
+
+bt
+
+//para adicionar break point 
+b main
+b arquivo.c:5
