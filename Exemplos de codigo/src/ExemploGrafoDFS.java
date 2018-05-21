@@ -43,12 +43,26 @@ public class ExemploGrafoDFS {
     // funcaco para fazer o DFS traversal. utiliza recursao do  DFSUtil()
     void DFS(int v)
     {
-        // Mark all the vertices as not visited(set as
-        // false by default in java)
+        // Marca todas as vertices (seta como falso por default)
         boolean visited[] = new boolean[V];
 
-        // Call the recursive helper function to print DFS traversal
+        // chama o helper recursivamanete para imprimir o DFS Transversal
         DFSUtil(v, visited);
     }
 
+    public static void main(String[] args) {
+        ExemploGrafoDFS g = new ExemploGrafoDFS(4);
+
+        g.addEdge(0, 1);
+        g.addEdge(0, 2);
+        g.addEdge(1, 2);
+        g.addEdge(2, 0);
+        g.addEdge(2, 3);
+        g.addEdge(3, 3);
+
+        System.out.println("DFS Traversal "+
+                "(comecando do verticie 2)");
+
+        g.DFS(2);
+    }
 }
