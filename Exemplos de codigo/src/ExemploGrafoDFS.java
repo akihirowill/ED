@@ -26,11 +26,11 @@ public class ExemploGrafoDFS {
     // funcao utilizada pelo DFS
     void DFSUtil(int v,boolean visited[])
     {
-        // Mark the current node as visited and print it
+        // marca o no atual como visitado
         visited[v] = true;
         System.out.print(v+" ");
 
-        // Recur for all the vertices adjacent to this vertex
+        // recursao para tds verticies adjacentes
         Iterator<Integer> i = adj[v].listIterator();
         while (i.hasNext())
         {

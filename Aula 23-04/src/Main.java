@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class WordTransformation {
+public class Main {
     public static void main(String[] args) {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         int t = 0;

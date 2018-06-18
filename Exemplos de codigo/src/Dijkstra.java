@@ -81,7 +81,7 @@ public class Dijkstra
                 }
                 while(j != 0);
             }
-            System.out.println();
+
         }
     }
 }

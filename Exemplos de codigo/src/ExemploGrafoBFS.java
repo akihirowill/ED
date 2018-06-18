@@ -1,6 +1,6 @@
 import java.util.Iterator;
 import java.util.LinkedList;
-
+//Exemplo Binary First Search
 public class ExemploGrafoBFS {
     private int V;   // No. de vertices
     private LinkedList<Integer> adj[]; // Listas de adjacencia

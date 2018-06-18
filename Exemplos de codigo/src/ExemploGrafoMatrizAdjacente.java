@@ -79,3 +79,22 @@ public class ExemploGrafoMatrizAdjacente {
         scan.close();
     }
 }
+
+/*Enter the Number of Vertices and Edges
+4 5
+Enter The Graph Egdes Format : <source index> <destination index>
+
+1 2
+2 3
+3 4
+4 1
+1 3
+
+The adjacency matrix for given graph is
+
+	1	2	3	4
+1	0	1	1	0
+2	0	0	1	0
+3	0	0	0	1
+4	1	0	0	0
+*/
