@@ -68,6 +68,8 @@ public class RabinKarp {
         int q = 101; // numero primo
         busca(padrao,texto,q);
 
+        System.out.println("teste");
+
     }
 
 }
