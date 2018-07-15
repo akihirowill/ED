@@ -7,9 +7,9 @@ Implementação do algoritmo de Rabin-Karp apresentada no livro Introducao a alg
 public class RabinKarp {
     // d é o numero de caracteres no alfabeto de entrada
     public static final int d = 256;
+    public static final int q = 11; // numero primo.
 
-    //q ->    numero primo
-    static void busca(String padrao,String texto,int q){
+    static void busca(String padrao,String texto){
         int tamanhoDoPadrao = padrao.length();
         int tamanhoDoTexto = texto.length();
         int i,j;
@@ -17,7 +17,7 @@ public class RabinKarp {
         int hashTexto = 0;
         int h = 1;
 
-        //valor de h sera (pow(d, tamanhoDoPadrao-1)%q)
+        //calcula o valor do hash
         for (i = 0; i < tamanhoDoPadrao; i++){
             h = (h*d)%q;
         }
@@ -54,7 +54,7 @@ public class RabinKarp {
 
                 // podemos pegar um valor negativo de hash, e converte-lo para positivo
                 if (hashTexto < 0) {
-                    hashTexto = (hashTexto + q);
+                    hashTexto = (hashTexto + (100*q))%q;
                 }
             }
         }
@@ -63,13 +63,9 @@ public class RabinKarp {
     }
 
     public static void main(String[] args) {
-        String texto = "PPGCCCPGAPGCCPPGCC";
+        String texto =  "PPGCCCPGAPGCCPPGCC";
         String padrao = "PPGCC";
-        int q = 101; // numero primo
-        busca(padrao,texto,q);
-
-        System.out.println("teste");
-
+        busca(padrao,texto);
     }
 
 }
